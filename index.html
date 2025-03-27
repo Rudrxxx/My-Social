@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Social - A Social Networking Site</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>My Social</h1>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search My Social">
+                <button title="Search"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="nav-links">
+                <a href="#" class="active"><i class="fas fa-home"></i></a>
+                <a href="#"><i class="fas fa-user-friends"></i></a>
+                <a href="#"><i class="fas fa-bell"></i></a>
+                <a href="#"><i class="fas fa-envelope"></i></a>
+            </div>
+            <div class="profile-link">
+                <img src="images/users/user1.jpg" alt="Profile Picture" id="current-user-img">
+                <span id="current-user-name">Rudransh</span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="left-sidebar">
+                <ul>
+                    <li><a href="#" id="home-link"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="#" id="profile-link"><i class="fas fa-user"></i> Profile</a></li>
+                    <li><a href="#"><i class="fas fa-user-friends"></i> Friends</a></li>
+                    <li><a href="#"><i class="fas fa-image"></i> Photos</a></li>
+                    <li><a href="#"><i class="fas fa-bookmark"></i> Saved</a></li>
+                    <li><a href="#"><i class="fas fa-flag"></i> Pages</a></li>
+                    <li><a href="#"><i class="fas fa-calendar"></i> Events</a></li>
+                </ul>
+            </div>
+
+            <div class="content" id="main-content">
+                <div class="create-post">
+                    <div class="post-top">
+                        <img src="images/users/user1.jpg" alt="Profile Picture">
+                        <input type="text" placeholder="What's on your mind?" id="post-text">
+                    </div>
+                    <div class="post-bottom">
+                        <div class="post-options">
+                            <div class="option">
+                                <i class="fas fa-image"></i>
+                                <span>Photo/Video</span>
+                            </div>
+                            <div class="option">
+                                <i class="fas fa-user-tag"></i>
+                                <span>Tag Friends</span>
+                            </div>
+                            <div class="option">
+                                <i class="fas fa-smile"></i>
+                                <span>Feeling/Activity</span>
+                            </div>
+                        </div>
+                        <button id="create-post-btn">Post</button>
+                    </div>
+                </div>
+
+                <div class="posts-container" id="posts-container">
+                    <!-- Posts will be loaded here by JavaScript -->
+                </div>
+            </div>
+
+            <div class="right-sidebar">
+                <div class="sidebar-title">
+                    <h4>Events</h4>
+                    <a href="#">See All</a>
+                </div>
+                <div class="event">
+                    <div class="left-event">
+                        <h3>18</h3>
+                        <span>March</span>
+                    </div>
+                    <div class="right-event">
+                        <h4>Social Media Meetup</h4>
+                        <p><i class="fas fa-map-marker-alt"></i> Tech Hub</p>
+                        <a href="#">More Info</a>
+                    </div>
+                </div>
+                <div class="event">
+                    <div class="left-event">
+                        <h3>22</h3>
+                        <span>June</span>
+                    </div>
+                    <div class="right-event">
+                        <h4>Web Development Workshop</h4>
+                        <p><i class="fas fa-map-marker-alt"></i> Digital Studio</p>
+                        <a href="#">More Info</a>
+                    </div>
+                </div>
+
+                <div class="sidebar-title">
+                    <h4>Friend Suggestions</h4>
+                    <a href="#">See All</a>
+                </div>
+                <div class="friend-suggestions" id="friend-suggestions">
+                    <!-- Friend suggestions will be added here by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Profile View Template (Initially Hidden) -->
+    <div id="profile-view" class="profile-view">
+        <div class="profile-header">
+            <div class="cover-photo">
+                <img src="images/cover-default.jpg" alt="Cover Photo" id="profile-cover">
+            </div>
+            <div class="profile-info">
+                <img src="images/users/user1.jpg" alt="Profile Picture" id="profile-pic">
+                <h2 id="profile-name">Rudransh</h2>
+                <p id="profile-bio">Hi, I'm using My Social!</p>
+            </div>
+            <div class="profile-actions">
+                <button class="add-friend"><i class="fas fa-user-plus"></i> Add Friend</button>
+                <button class="message"><i class="fas fa-comment"></i> Message</button>
+            </div>
+        </div>
+        <div class="profile-content">
+            <div class="profile-nav">
+                <button class="active" data-tab="posts">Posts</button>
+                <button data-tab="about">About</button>
+                <button data-tab="friends">Friends</button>
+                <button data-tab="photos">Photos</button>
+            </div>
+            <div class="profile-tab-content">
+                <div class="tab-pane active" id="profile-posts">
+                    <!-- User posts will be loaded here -->
+                </div>
+                <div class="tab-pane" id="profile-about">
+                    <div class="about-section">
+                        <h3>About</h3>
+                        <div class="about-details">
+                            <p><i class="fas fa-briefcase"></i> <span id="profile-work">Works at Company Google</span></p>
+                            <p><i class="fas fa-graduation-cap"></i> <span id="profile-education">Studied at ADYPU</span></p>
+                            <p><i class="fas fa-home"></i> <span id="profile-location">Lives in Pune</span></p>
+                            <p><i class="fas fa-heart"></i> <span id="profile-relationship">Single</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane" id="profile-friends">
+                    <div class="friends-grid" id="profile-friends-grid">
+                        <!-- Friends will be loaded here -->
+                    </div>
+                </div>
+                <div class="tab-pane" id="profile-photos">
+                    <div class="photos-grid" id="profile-photos-grid">
+                        <!-- Photos will be loaded here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Post Detail View for Comments (Initially Hidden) -->
+    <div id="post-detail-view" class="post-detail-view">
+        <div class="post-detail-container">
+            <button class="close-btn" id="close-post-detail" title="Close"><i class="fas fa-times"></i></button>
+            <div id="detail-post-content"></div>
+            <div class="comments-section">
+                <h3>Comments</h3>
+                <div class="comments-container" id="comments-container">
+                    <!-- Comments will be loaded here -->
+                </div>
+                <div class="add-comment">
+                    <img src="images/users/user1.jpg" alt="Profile Picture" id="comment-user-img">
+                    <input type="text" placeholder="Write a comment..." id="comment-input">
+                    <button id="post-comment-btn" title="Post Comment"><i class="fas fa-paper-plane"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
