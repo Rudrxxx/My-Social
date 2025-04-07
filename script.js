@@ -78,7 +78,7 @@ const posts = [
         id: 1,
         userId: 1,
         text: "Just launched my new website! Check it out and let me know what you think.",
-        image: "images/posts/post1.jpg",
+        image: "images/posts/post2.jpg",
         date: "2023-05-15T14:30:00",
         likes: [2, 3, 5],
         comments: [
@@ -91,7 +91,7 @@ const posts = [
         id: 2,
         userId: 2,
         text: "Just finished this new digital art piece. What do you all think?",
-        image: "images/posts/post2.jpg",
+        image: "images/posts/post1.jpg",
         date: "2023-05-14T10:15:00",
         likes: [1, 3, 4],
         comments: [
